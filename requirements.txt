@@ -3,4 +3,4 @@ bs4
 pandas
 flask-jsonpify
 flask-sqlalchemy
-flask-restful
+flask_restful
