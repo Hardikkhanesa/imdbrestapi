@@ -5,6 +5,7 @@ import re
 import sqlite3
 import itertools
 from datetime import datetime
+import locale
 import time
 try:
     conn = sqlite3.connect('imdb.db')
@@ -15,7 +16,7 @@ except Error as e:
 url = 'https://www.imdb.com/chart/top?ref_=nv_mv_250'
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')
-bad_chars = [';', ':', '!', "*","\n","[","]","(",")"]
+bad_chars = [';', ':', '!', "*","\n","[","]","(",")","\\n"]
 movies = soup.select('td.titleColumn')
 
 links = [a.attrs.get('href') for a in soup.select('td.titleColumn a')]
@@ -48,12 +49,14 @@ for link in links:
     releasedate= [a.string for a in soup1.select('.subtext a')]
     releasedate=releasedate[-1]
 #    print(releasedate)
-    rd.append(releasedate)
+
     for i in bad_chars:
         releasedate = releasedate.replace(i, '')
-    date_object = datetime.strptime(releasedate, '%d-%B-%Y %A').date()
-    print(type(date_object))
-    print(date_object)
+    print(releasedate)
+    rd.append(releasedate)
+#    date_object = datetime.strptime(releasedate, '%d %B %Y %A').date()
+#    print(type(date_object))
+#    print(date_object)
 
 
 
@@ -62,11 +65,16 @@ for link in links:
 
 
     s=(str(datetie))
+    for i in bad_chars:
+        s = s.replace(i, '')
     dur.append(s)
 #   print(dur)
     summarytext = [c.string for c in soup1.select('.summary_text')]
 #    print(summarytext)
-    y=str(summarytext)
+    y = str(summarytext)
+    for i in bad_chars:
+        y = y.replace(i, '')
+
     desc.append(y)
 #    print(desc)
     c+=1
