@@ -8,7 +8,7 @@ Windows:
 ##env\scripts\activate
 
 
-2.pip install requirements.txt
+2.pip install -r requirements.txt
 
 3.python server.py
 
