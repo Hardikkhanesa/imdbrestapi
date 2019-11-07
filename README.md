@@ -12,5 +12,5 @@ env\scripts\activate
 
 3.python server.py
 
-
+4.login page username:admin password:password
 
