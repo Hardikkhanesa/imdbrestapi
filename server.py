@@ -59,7 +59,7 @@ def movies():
 def moviesid():
     ID = str(request.form['id'])
     conn = db_connect.connect()
-    query = conn.execute("select * from MOVIES where ID =%d " %int(ID))
+    query = conn.execute("select * from MOVIES where ID =%d" %int(ID))
     result = {'data': [dict(zip(tuple(query.keys()), i)) for i in query.cursor]}
     return jsonify(result)
 @app.route("/sortbyname",methods=['POST'])
