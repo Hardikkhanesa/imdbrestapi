@@ -30,29 +30,24 @@ Windows:
 2.pip install -r requirements.txt
 
 
-3.
-make imdb.db
+3.make imdb.db
 
 1.sqlite3 imdb.db
 2.CREATE TABLE MOVIES(ID INTEGER PRIMARY KEY,TITLE TEXT,RATING NUMBER,RELEASEDATE TEXT,DURATION TEXT,DESCRIPTION TEXT);
 
 
 
-4.
-
-python task.py
+4.python task.py
 
 it will take time to scrap data from https://www.imdb.com/chart/top?ref_=nv_mv_250
 
 nearly 5 minutes to scrap and store data in imdb.db
 
 
-5.
-python tablelogin.py
+5.python tablelogin.py
 
 sqlite3 logindata.db
 INSERT INTO users(username,password) VALUES('admin','password');
 
-6.
-python server.py
+6.python server.py
 
