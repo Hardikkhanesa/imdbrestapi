@@ -1,4 +1,4 @@
-# https://bit.ly/2NyxdAG
+
 from bs4 import BeautifulSoup
 import requests
 import re
