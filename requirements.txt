@@ -4,3 +4,4 @@ pandas
 flask-jsonpify
 flask-sqlalchemy
 flask_restful
+lxml
