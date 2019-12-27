@@ -15,7 +15,21 @@ Windows:
 username:admin 
 password:password
 
+* Login page
 
+![page1](https://user-images.githubusercontent.com/26074662/71502561-e75c1b00-2896-11ea-8b8d-4260ebcc98ce.png)
+
+* Main page
+
+![page2](https://user-images.githubusercontent.com/26074662/71502585-00fd6280-2897-11ea-9baa-6db9f82811a1.png)
+
+* Activity page
+
+![page3](https://user-images.githubusercontent.com/26074662/71502604-1d010400-2897-11ea-8e47-a27dcea7c919.png)
+
+* Another activity page
+
+![page4](https://user-images.githubusercontent.com/26074662/71502617-30ac6a80-2897-11ea-9f33-6371e70e5922.png)
 
 
 
