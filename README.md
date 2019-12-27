@@ -47,7 +47,7 @@ nearly 5 minutes to scrap and store data in imdb.db
 ## step 5.python tablelogin.py
 
 1.sqlite3 logindata.db
-2.CREATE TABLE users(username TEXT,password TEXT);
+2.CREATE TABLE users(id INTEGER PRIMARY KEY,username TEXT,password TEXT);
 3.INSERT INTO users(username,password) VALUES('admin','password');
 
 ## step 6.python server.py
